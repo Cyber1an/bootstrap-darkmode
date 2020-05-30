@@ -1,0 +1,11 @@
+{
+  "name": "bootstrap-darkmode",
+  "version": "0.0.1",
+  "description": "Bootstrap dark mode example",
+  "main": "darkmode.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Nebojsa Grujic",
+  "license": "ISC"
+}

@@ -1,0 +1,123 @@
+/* Bootstrap theme override
+*  First block will be used for light mode as default theme
+*  Second block will be used for dark theme
+*/
+@font-face {
+  font-family: "Gilroy ExtraBold";
+  src: url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.eot");
+  src: url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.eot?#iefix") format("embedded-opentype"), url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.woff2") format("woff2"), url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.woff") format("woff"), url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.ttf") format("truetype"), url("//db.onlinewebfonts.com/t/00d5a78493aed4b11e2584ad7cceee49.svg#Gilroy ExtraBold") format("svg");
+}
+html {
+  --foreground: rgb(13, 13, 13);
+  --foreground-inverse: rgb(250, 250, 250);
+  --background: rgb(250, 250, 250);
+  --background-inverse: rgb(13, 13, 13);
+  --acent: #007bff;
+  --attribute: #66d9ef;
+  --selector-attr: #e6db74;
+  --selector-class: #a6e22e;
+}
+
+html[data-theme=dark] {
+  --foreground: rgb(250, 250, 250);
+  --foreground-inverse: rgb(13, 13, 13);
+  --background: rgb(13, 13, 13);
+  --background-inverse: rgb(250, 250, 250);
+  --acent: #dc3545;
+  --attribute: #e81677;
+  --selector-attr: #cb6a31;
+  --selector-class: #29b802;
+}
+
+html.transition,
+html.transition * {
+  transition: background-color 750ms !important;
+  transition-delay: 0s !important;
+}
+
+*:focus {
+  outline: none !important;
+}
+
+body {
+  font-family: "Gilroy ExtraBold", sans-serif;
+  background-color: var(--background) !important;
+}
+
+.navbar-inverse {
+  background-color: var(--background-inverse);
+}
+.navbar-inverse h1, .navbar-inverse h2, .navbar-inverse h3, .navbar-inverse h4, .navbar-inverse h5, .navbar-inverse h6, .navbar-inverse p, .navbar-inverse span {
+  color: var(--foreground-inverse);
+}
+
+a {
+  color: var(--acent);
+}
+
+p {
+  color: var(--foreground);
+}
+
+.text-dark {
+  color: var(--foreground-inverse) !important;
+}
+
+.btn:focus, .btn:active {
+  outline: none !important;
+  box-shadow: none;
+}
+
+.btn-primary, .btn-primary:hover {
+  color: var(--acent);
+  background-color: transparent;
+  border-color: 1px solid var(--acent);
+  -webkit-box-shadow: 0px 0px 5px 0px var(--acent);
+  -moz-box-shadow: 0px 0px 5px 0px var(--acent);
+  box-shadow: 0px 0px 5px 0px var(--acent);
+}
+
+.btn-primary:focus, .btn-primary:active {
+  color: var(--foreground);
+  border-color: 1px solid var(--acent);
+  background-color: var(--acent);
+  -webkit-box-shadow: 0px 0px 5px 0px var(--acent);
+  -moz-box-shadow: 0px 0px 5px 0px var(--acent);
+  box-shadow: 0px 0px 5px 0px var(--acent);
+}
+
+.card {
+  background-color: var(--background-inverse);
+  border: 1px solid rgba(0, 0, 0, 0.125);
+  color: var(--foreground-inverse);
+}
+
+.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  color: var(--foreground-inverse) !important;
+  background: var(--background-inverse) !important;
+}
+
+.hljs-tag, .hljs-params {
+  color: var(--foreground-inverse) !important;
+}
+
+.hljs-attribute {
+  color: var(--attribute) !important;
+}
+
+.hljs-selector-attr, .hljs-string {
+  color: var(--selector-attr) !important;
+}
+
+.hljs-built_in {
+  color: var(--selector-attr) !important;
+}
+
+.hljs-selector-class {
+  color: var(--selector-class) !important;
+}
+
+/*# sourceMappingURL=style.css.map */
